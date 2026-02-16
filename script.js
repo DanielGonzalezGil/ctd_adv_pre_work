@@ -1,5 +1,3 @@
-//TODO:
-    // Figure out how to get location dynamically (currently hard coded to chapel hill nc)
 
 const getForecastData = async (longitude,latitude) => {
     //forecast endpoint
@@ -26,9 +24,9 @@ const renderForecastData = (forecastData) => {
 };
 
 const renderTerrainElevationData = (terrainElevationData) => {
-    // 1. Access the actual array from the API response
+    //Accessing the actual array from the API response
     const elevations = terrainElevationData.elevation;
-    // 2. Map over that array directly
+    //Map over that array directly
     return elevations.map((value) => `<li>${value} Meters</li>`).join('');
 };
 
@@ -42,8 +40,7 @@ const renderTerrainElevationData = (terrainElevationData) => {
     //selecting the html div where the result will be displayed
     const container = document.querySelector('#forecast-result');
 
-    //Event Listerners for each button
-    weatherForecastBtn.addEventListener("click", () => {
+    //Event Listerners for each button  weatherForecastBtn.addEventListener("click", () => {
         navigator.geolocation.getCurrentPosition(async (position) => {
             const {latitude, longitude} = position.coords;
             const data = await getForecastData(longitude, latitude);
