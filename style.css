@@ -1,4 +1,4 @@
-.container {
+.container{
     display: flex;
     flex-direction: column; 
     align-items: flex-start; 
@@ -6,13 +6,22 @@
     justify-content: center;               
 }
 
-body {
-  margin: 0;           
-  display: flex;       
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center;     
-  min-height: 100vh;   
-  text-align: center;  
-  font-family: sans-serif; 
+body{
+    margin: 0;           
+    display: flex;       
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;   
+    text-align: center;  
+    font-family: sans-serif; 
+}
+
+button{
+    background-color: rgb(46, 49, 41); 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
 }
